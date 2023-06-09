@@ -1,0 +1,47 @@
+﻿@model TestTask.Data.Models.Product
+
+<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+        <h1 class="mb-0">@Model.Name</h1>
+        <h2 class="mb-0">Цена: @Model.Price.ToString("c")</h2>
+        <h2 class="mb-0">Площадь: @Model.Size.ToString()</h2>
+        <h2 class="mb-0">Район: @Model.District</h2>
+        <p class="card-text mb-auto">@Model.LongDescription</p>
+
+    </div>
+    <div class="col-auto d-none d-lg-block">
+        <svg class="bd-placeholder-img" width="300" height="300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <img class="img-thumbnail" src="@Model.Image">
+            <rect width="100%" height="100%" fill="#55595c"></rect>
+    </div>
+</div>
+
+<main class="form-signin w-100 m-auto">
+    <form>
+        <h1 class="h3 mb-3 fw-normal">Нужна помощь?</h1>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Имя">
+            <label for="floatingInput">Имя</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email адрес</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="номер телефона">
+            <label for="floatingInput">Номер телефона</label>
+        </div>
+        <div class="form-floating">
+            <input type="email" class="form-control" id="floatingInput" placeholder="Сообщение">
+            <label for="floatingInput">Сообщение</label>
+        </div>
+        <div class="form-check text-start my-3">
+            <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                Я принимаю
+            </label>
+        </div>
+        <button class="btn btn-primary w-100 py-2" type="submit">Отправить</button>
+    </form>
+</main>
